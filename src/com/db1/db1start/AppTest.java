@@ -176,4 +176,5 @@ public class AppTest {
         Integer response = application.quantidadeVogais("LEANDRO");
         Assert.assertEquals(expected, response);
     }
+
 }
