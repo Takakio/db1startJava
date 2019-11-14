@@ -4,6 +4,8 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.experimental.theories.suppliers.TestedOn;
 
+import javax.swing.*;
+
 public class AppTest {
 
     @Test
@@ -56,7 +58,7 @@ public class AppTest {
     }
 
     @Test
-    public void verificaNumeroPar(){
+    public void DeveVerificarNumeroPar(){
         Application application = new Application();
         Integer expected = 0;
         Integer response = application.par(12);
@@ -64,7 +66,7 @@ public class AppTest {
     }
 
     @Test
-    public void maior(){
+    public void DeveRetornarOMaior(){
         Application application = new Application();
         Integer expected = 10;
         Integer response = application.maior(10,8);
@@ -72,7 +74,7 @@ public class AppTest {
     }
 
     @Test
-    public void quantosImpares(){
+    public void DeveRetornarQuantidadeDeImpares(){
         Application application = new Application();
         Integer expected = 5;
         Integer response = application.quantosImpares(10);
@@ -80,7 +82,7 @@ public class AppTest {
     }
 
     @Test
-    public void maiusculo(){
+    public void DeveRetornarTextoMaiusculo(){
         Application application = new Application();
         String expected = "LEANDRO";
         String response = application.maiusculo("leandro");
@@ -88,7 +90,7 @@ public class AppTest {
     }
 
     @Test
-    public void minusculo(){
+    public void DeveRetornarTextoMinusculo(){
         Application application = new Application();
         String expected = "leandro";
         String response = application.minusculo("LEANDRO");
@@ -96,7 +98,7 @@ public class AppTest {
     }
 
     @Test
-    public void contaLetrasDB1start(){
+    public void DeveRetornarQuantidadeDeLetrasDB1start(){
         Application application = new Application();
         Integer expected = 8;
         Integer response = application.contaLetrasDB1start("DB1Start");
@@ -104,7 +106,7 @@ public class AppTest {
     }
 
     @Test
-    public void contaLetrasSemEspacos(){
+    public void DeveRetornarQuantidadeDeLetrasSemEspacos(){
         Application application = new Application();
         Integer expected = 8;
         Integer response = application.contaLetrasSemEspacos(" DB1Start ");
@@ -113,7 +115,7 @@ public class AppTest {
 
     @Test
 
-    public void apenasPrimeirasLetras(){
+    public void DeveraRetornarApenasPrimeirasLetras(){
         Application application = new Application();
         String expected = "Lean";
         String response = application.apenasPrimeirasLetras("Leandro Mikio Takahashi");
@@ -122,7 +124,7 @@ public class AppTest {
 
     @Test
 
-    public void aPartirDaTerceiraLetra(){
+    public void DeveraRetornarAPartirDaTerceiraLetra(){
         Application application = new Application();
         String expected = ("ndro Mikio Takahashi");
         String response = application.aPartirDaTerceiraLetra("Leandro Mikio Takahashi");
@@ -130,21 +132,13 @@ public class AppTest {
     }
 
     @Test
-    public void apenasUltimasLetras(){
+    public void DeveRetornarApenasUltimasLetras(){
         Application application = new Application();
         String expected = ("ashi");
         String response = application.apenasUltimasLetras("Leandro Mikio Takahashi");
         Assert.assertEquals(expected, response);
     }
 
-    /*@Test  //Este teste não ficou dinâmico
-    public void trocaNomePorAluno(){
-        Application application = new Application();
-        String expected = ("Aluno Mikio Takahashi");
-        String response = application.trocaNomePorAluno("Leandro Mikio Takahashi");
-        Assert.assertEquals(expected, response);
-    }*/
-
     @Test
     public void trocaNomePorAluno(){
         Application application = new Application();
@@ -154,20 +148,13 @@ public class AppTest {
     }
 
     @Test
+
     public void separaPalavras(){
         Application application = new Application();
         String[] expected = new String[]{"banana", "maçã", "melancia"};
         String[] response = application.separaPalavras("banana, maçã, melancia");
         Assert.assertEquals(expected, response);
     }
-
-    /*@Test
-    public void contarVogais(){
-        Application application = new Application();
-        Integer expected = 10;
-        String response = application.contaVogais("Leandro Mikio Takahashi");
-        Assert.assertEquals(expected, response);
-    }*/
 
     @Test
     public void deveContarQuantidadeDeVogais(){
@@ -177,4 +164,47 @@ public class AppTest {
         Assert.assertEquals(expected, response);
     }
 
+<<<<<<< HEAD
+=======
+    @Test
+    public void deveRetornarOTextoInverso(){
+        Application application = new Application();
+        String expected = ("trats1BD");
+        String response = application.textoReverso("DB1start");
+        Assert.assertEquals(expected, response);
+    }
+
+    @Test
+    public void deveRetornarOMenorValor(){
+        Application application = new Application();
+        Double expected = 10.8;
+        Double response = application.menorValor(10.8,20.5);
+        Assert.assertEquals(expected, response);
+    }
+
+    @Test
+    public void deveRetornarOMenorValorEntreTres(){
+        Application application = new Application();
+        Double expected = 3.2;
+        Double response = application.menorValorEntreTres(7.8,5.4,3.2);
+        Assert.assertEquals(expected, response);
+    }
+
+    @Test
+    public void deveRetornarAMediaEntreTresNumeros(){
+        Application application = new Application();
+        Double expected = 11.333333333333334;
+        Double response = application.mediaEntreTresNumeros(10.0,17.0,7.0);
+        Assert.assertEquals(expected, response);
+    }
+
+    @Test
+    public void deveRetornarAAreaDoTriangulo(){
+        Application application = new Application();
+        Double expected = 6.0;
+        Double response = application.areaDoTriangulo(3.0,4.0);
+        Assert.assertEquals(expected,response);
+    }
+
+>>>>>>> f1ff95a5e71a46e1d3bbe6a647df70a76286739c
 }

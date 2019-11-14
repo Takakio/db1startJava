@@ -98,28 +98,10 @@ public class Application {
         return aluno.concat(nomeTratado);
     }
 
-    /*public String trocaNomePorAluno(String texto){
-        String trocaNome = texto.replaceAll("Leandro", "Aluno");
-        return trocaNome;
-    }*/
-
-    public String[] separaPalavras(String texto){
-        return texto.split(", ");
+    public String[] separaPalavras(String texto) {
+        String[] textoDividido = texto.split(", ");
+        return textoDividido;
     }
-
-    /*public Integer contaVogais(String texto){
-        Integer contador = 0;
-        texto.toLowerCase();
-
-        for (Integer i = 0; i < texto.length(); i++){
-            Integer letra = texto.charAt(i);
-            if (letra == "a" || letra == "e" || letra == "i" || letra == "o" || letra == "u"){
-                contador++;
-            }
-        }
-
-        return contador;
-    }*/
 
     public Integer quantidadeVogais(String texto){
         return texto
@@ -129,4 +111,45 @@ public class Application {
                 .replaceAll("[^AEIOU]", "")
                 .length();
     }
+
+    public String textoReverso(String texto) {
+        String inverso = "";
+        for (Integer i = texto.length() - 1; i >= 0; i--)
+            inverso += texto.charAt(i);
+        return inverso;
+    }
+
+    public Double menorValor(Double numero1, Double numero2){
+        if (numero1 < numero2){
+            return numero1;
+        }
+        return numero2;
+    }
+
+    public Double menorValorEntreTres(Double numero1, Double numero2, Double numero3){
+        Double menor;
+        if (numero1 < numero2){
+            menor = numero1;
+        } else {
+            menor = numero2;
+        }
+        if (menor < numero3){
+            return menor;
+        }
+        return numero3;
+    }
+
+    public Double mediaEntreTresNumeros(Double numero1, Double numero2, Double numero3){
+        Double soma;
+        Double media;
+        soma = numero1 + numero2 + numero3;
+        return media = soma / 3;
+    }
+
+    public Double areaDoTriangulo(Double base, Double altura){
+        Double area;
+        return area = (base*altura)/2;
+    }
+
+
 }
