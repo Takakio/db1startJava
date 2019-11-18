@@ -164,8 +164,6 @@ public class AppTest {
         Assert.assertEquals(expected, response);
     }
 
-<<<<<<< HEAD
-=======
     @Test
     public void deveRetornarOTextoInverso(){
         Application application = new Application();
@@ -206,5 +204,4 @@ public class AppTest {
         Assert.assertEquals(expected,response);
     }
 
->>>>>>> f1ff95a5e71a46e1d3bbe6a647df70a76286739c
 }
